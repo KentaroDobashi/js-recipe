@@ -42,3 +42,8 @@ const alertTime = function () {
 }
 
 alertTime()
+
+const fruits = ["りんご", "みかん", "パイナップル"]
+
+localStorage.fruits = JSON.stringify(fruits)
+console.log(localStorage.fruits)
