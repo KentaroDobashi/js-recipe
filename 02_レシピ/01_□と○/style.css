@@ -11,3 +11,9 @@
 .rounded {
   border-radius: 50px;
 }
+
+.triangle {
+  border-right: 50px solid transparent;
+  border-bottom: 86.6025px solid black;
+  border-left: 50px solid transparent;
+}
