@@ -8,3 +8,7 @@ figure.onclick = function () {
 document.onkeydown = function () {
   figure.classList.toggle("rounded")
 }
+
+const figures = []
+
+figure.onclick
