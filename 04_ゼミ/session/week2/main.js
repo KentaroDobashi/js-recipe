@@ -1,19 +1,28 @@
 const memoInput = document.getElementById("memo-input")
 const addButton = document.getElementById("add-button")
 const memoContainer = document.getElementById("memo-container")
+
+//追加ボタンを押した時の処理
 addButton.onclick = function () {
+  //メモを表示させる
+  const memo = createMemo(memoInput.value)
+  memoContainer.append(memo)
   console.log(memoInput.value)
-
-  const card = document.createElement("div")
-  card.textContent = memoInput.value
-  memoContainer.append(card)
-
   memoInput.value = ""
+}
+
+//cardを作る関数
+const createMemo = function (text) {
+  const memo = document.createElement("div")
+  memo.textContent = text
+
+  //cardに削除ボタンを作る
   const removeButton = document.createElement("button")
   removeButton.textContent = "削除"
-  card.append(removeButton)
+  memo.append(removeButton)
 
   removeButton.onclick = function () {
-    memoContainer.remove(card)
+    memo.remove()
   }
+  return memo
 }
