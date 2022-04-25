@@ -6,53 +6,30 @@ const choice3 = document.getElementById("choice-3")
 const feedback = document.getElementById("feedback")
 
 //クイズの内容
-const quiz = [
-  {
-    text: "この星は何の名前でしょう？",
-    image: "Ganymede.jpg",
-    choices: [
-      {
-        text: "ゴリアテ",
-        feedback:
-          "残念！ゴリアテは、旧約聖書に登場するダビデに石で殺される巨人だよ。",
-      },
-      {
-        text: "ゼニガメ",
-        feedback: "残念！ゼニガメは、クサガメまたはニホンイシガメの幼体だよ。",
-      },
-      {
-        text: "ガニメテ",
-        feedback: "正解！ガニメデは、木星の第三惑星だよ！",
-      },
-    ],
-  },
-
-  {
-    text: "このポケモンの名前は？",
-    image: "",
-    caches: [
-      {
-        text: "",
-        feedback: "",
-      },
-      {
-        text: "",
-        feedback: "",
-      },
-      {
-        text: "",
-        feedback: "",
-      },
-    ],
-  },
-]
-
-// クイズがもつ選択肢の数だけボタンを追加
+const quiz = {
+  text: "この星は何の名前でしょう？",
+  image: "Ganymede.jpg",
+  choices: [
+    {
+      text: "ゴリアテ",
+      feedback:
+        "残念！ゴリアテは、旧約聖書に登場するダビデに石で殺される巨人だよ。",
+    },
+    {
+      text: "ゼニガメ",
+      feedback: "残念！ゼニガメは、クサガメまたはニホンイシガメの幼体だよ。",
+    },
+    {
+      text: "ガニメテ",
+      feedback: "正解！ガニメデは、木星の第三惑星だよ！",
+    },
+  ],
+}
 
 //quiz を画面に表示させる関数
 const reloadQuiz = function () {
   //問題文を表示
-  quizText.textContent = "Q. " + quiz.text
+  quizText.textContent = "Q." + quiz.text
 
   //画像を表示
   quizImage.src = "./images/" + quiz.image
