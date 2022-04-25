@@ -38,5 +38,5 @@ const createCard = function (text) {
   // 削除ボタンをcardに追加
   card.append(deleteButton)
 
-  return card
+  //return card
 }

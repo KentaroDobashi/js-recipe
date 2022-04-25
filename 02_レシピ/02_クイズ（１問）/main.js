@@ -3,28 +3,51 @@ const quizImage = document.getElementById("quiz-image")
 const choice1 = document.getElementById("choice-1")
 const choice2 = document.getElementById("choice-2")
 const choice3 = document.getElementById("choice-3")
-const feadback = document.getElementById("feadback")
+const feedback = document.getElementById("feedback")
 
 //クイズの内容
-const quiz = {
-  text: "この星は何の名前でしょう？",
-  image: "Ganymede.jpg",
-  choices: [
-    {
-      text: "ゴリアテ",
-      feedback:
-        "残念！ゴリアテは、旧約聖書に登場するダビデに石で殺される巨人だよ。",
-    },
-    {
-      text: "ゼニガメ",
-      feedback: "残念！ゼニガメは、クサガメまたはニホンイシガメの幼体だよ。",
-    },
-    {
-      text: "ガニメテ",
-      feedback: "正解！ガニメデは、木星の第三惑星だよ！",
-    },
-  ],
-}
+const quiz = [
+  {
+    text: "この星は何の名前でしょう？",
+    image: "Ganymede.jpg",
+    choices: [
+      {
+        text: "ゴリアテ",
+        feedback:
+          "残念！ゴリアテは、旧約聖書に登場するダビデに石で殺される巨人だよ。",
+      },
+      {
+        text: "ゼニガメ",
+        feedback: "残念！ゼニガメは、クサガメまたはニホンイシガメの幼体だよ。",
+      },
+      {
+        text: "ガニメテ",
+        feedback: "正解！ガニメデは、木星の第三惑星だよ！",
+      },
+    ],
+  },
+
+  {
+    text: "このポケモンの名前は？",
+    image: "",
+    caches: [
+      {
+        text: "",
+        feedback: "",
+      },
+      {
+        text: "",
+        feedback: "",
+      },
+      {
+        text: "",
+        feedback: "",
+      },
+    ],
+  },
+]
+
+// クイズがもつ選択肢の数だけボタンを追加
 
 //quiz を画面に表示させる関数
 const reloadQuiz = function () {
