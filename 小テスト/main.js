@@ -6,3 +6,18 @@ const addAllNumber = function (numString) {
   }
   return result
 }
+
+function AreaOfTriangle(width, height) {
+  let area = (width * height) / 2
+  console.log(
+    "底辺の高さが『" +
+      width +
+      "』、高さが『" +
+      height +
+      "』の三角形の面積は『" +
+      area +
+      "』です",
+  )
+}
+
+AreaOfTriangle(10, 5)

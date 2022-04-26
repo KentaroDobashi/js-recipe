@@ -4,7 +4,7 @@ const choice1 = document.getElementById("choice-1")
 const choice2 = document.getElementById("choice-2")
 const choice3 = document.getElementById("choice-3")
 const feedback = document.getElementById("feedback")
-const nextQuiz = document.getElementById("next-quiz")
+const nextQuizButton = document.getElementById("next-quiz")
 
 //クイズの内容
 const quiz = [
@@ -99,7 +99,7 @@ choice3.onclick = function () {
 reloadQuiz()
 
 //nextQuiz を押すと次の問題を表示
-nextQuiz.onclick = function () {
+nextQuizButton.onclick = function () {
   if (count < quiz.length) {
     count++
   }
